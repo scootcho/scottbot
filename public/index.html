@@ -1,241 +1,744 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Ruby on Rails: Welcome aboard</title>
-    <style type="text/css" media="screen">
-      body {
-        margin: 0;
-        margin-bottom: 25px;
-        padding: 0;
-        background-color: #f0f0f0;
-        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-        font-size: 13px;
-        color: #333;
-      }
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
 
-      h1 {
-        font-size: 28px;
-        color: #000;
-      }
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Scottbot - a robot that likes to sleep (but barely gets any).</title>
+	<meta name="description" content="robots eat junk food for grease.">
+	<meta name="author" content="Scott Yu">
 
-      a  {color: #03c}
-      a:hover {
-        background-color: #03c;
-        color: white;
-        text-decoration: none;
-      }
+   <!-- Mobile Specific Metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+	<!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="css/default.css">
+	 <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/responsive.css">
+   <link rel="stylesheet" href="css/animate.css">
+   <link rel="stylesheet" href="css/magnific-popup.css">
+   <link rel="stylesheet" href="assets/owl-carousel/owl.carousel.css">
+   <link rel="stylesheet" href="assets/owl-carousel/owl.theme.css">
 
-      #page {
-        background-color: #f0f0f0;
-        width: 750px;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
-      }
+   <!-- Script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
 
-      #content {
-        float: left;
-        background-color: white;
-        border: 3px solid #aaa;
-        border-top: none;
-        padding: 25px;
-        width: 500px;
-      }
+   <!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.ico" >
 
-      #sidebar {
-        float: right;
-        width: 175px;
-      }
+</head>
 
-      #footer {
-        clear: both;
-      }
+<body>
 
-      #header, #about, #getting-started {
-        padding-left: 75px;
-        padding-right: 30px;
-      }
+  <!-- Preloader --> 
+    <div id="preloader">
+      <div class="spinner"></div>    
+    </div><!--preloader end-->
 
+   <!-- Header
+   ================================================== -->
+   <header id="home">
 
-      #header {
-        background-image: url("assets/rails.png");
-        background-repeat: no-repeat;
-        background-position: top left;
-        height: 64px;
-      }
-      #header h1, #header h2 {margin: 0}
-      #header h2 {
-        color: #888;
-        font-weight: normal;
-        font-size: 16px;
-      }
+      <nav id="m-nav">
 
+         <a class="mobile-btn" href="index.html#m-nav" title="Show navigation">Show navigation</a>
+	      <a class="mobile-btn" href="index.html#" title="Hide navigation">Hide navigation</a>
 
-      #about h3 {
-        margin: 0;
-        margin-bottom: 10px;
-        font-size: 14px;
-      }
+         <ul id="nav" class="nav">
+            <li class="current"><a class="smoothscroll" href="index.html#home">Home</a></li>
+            <li><a class="smoothscroll" href="index.html#blog">Blog</a></li>
+            <li><a class="smoothscroll" href="index.html#about">About Me</a></li>
+            <li><a class="smoothscroll" href="index.html#resume">Resume</a></li>
+            <li><a class="smoothscroll" href="index.html#portfolio">Portfolio</a></li>
+            <li><a class="smoothscroll" href="index.html#testimonials">Testimonials</a></li>
+            <li><a class="smoothscroll" href="index.html#contact">Contact</a></li>
+         </ul> <!-- end #nav -->
 
-      #about-content {
-        background-color: #ffd;
-        border: 1px solid #fc0;
-        margin-left: -55px;
-        margin-right: -10px;
-      }
-      #about-content table {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 11px;
-        border-collapse: collapse;
-      }
-      #about-content td {
-        padding: 10px;
-        padding-top: 3px;
-        padding-bottom: 3px;
-      }
-      #about-content td.name  {color: #555}
-      #about-content td.value {color: #000}
+      </nav> <!-- end #nav-wrap -->
 
-      #about-content ul {
-        padding: 0;
-        list-style-type: none;
-      }
+      <div class="row banner">
+         <div class="banner-text">
+            <h1 class="responsive-headline wow zoomIn">I'm <span>Scott Yu</span></h1>
+            <h3 class="wow fadeInUp">I'm a passionate <span>problem solver</span> and a <span>Ruby on Rails Developer</span> looking for problems that can be best <span>solved</span> with <span>technology</span> </br>
+            <hr />
+         </div>
+      </div>
 
-      #about-content.failure {
-        background-color: #fcc;
-        border: 1px solid #f00;
-      }
-      #about-content.failure p {
-        margin: 0;
-        padding: 10px;
-      }
+      <p class="scrolldown">
+         <a class="smoothscroll" href="index.html#about"><i class="fa fa-angle-double-down"></i></a>
+      </p>
 
+      <div class="header-overlay"></div>
 
-      #getting-started {
-        border-top: 1px solid #ccc;
-        margin-top: 25px;
-        padding-top: 15px;
-      }
-      #getting-started h1 {
-        margin: 0;
-        font-size: 20px;
-      }
-      #getting-started h2 {
-        margin: 0;
-        font-size: 14px;
-        font-weight: normal;
-        color: #333;
-        margin-bottom: 25px;
-      }
-      #getting-started ol {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #getting-started li {
-        font-size: 18px;
-        color: #888;
-        margin-bottom: 25px;
-      }
-      #getting-started li h2 {
-        margin: 0;
-        font-weight: normal;
-        font-size: 18px;
-        color: #333;
-      }
-      #getting-started li p {
-        color: #555;
-        font-size: 13px;
-      }
-
-
-      #sidebar ul {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #sidebar ul h3 {
-        margin-top: 25px;
-        font-size: 16px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-      }
-      #sidebar li {
-        list-style-type: none;
-      }
-      #sidebar ul.links li {
-        margin-bottom: 5px;
-      }
-
-      .filename {
-        font-style: italic;
-      }
-    </style>
-    <script type="text/javascript">
-      function about() {
-        info = document.getElementById('about-content');
-        if (window.XMLHttpRequest)
-          { xhr = new XMLHttpRequest(); }
-        else
-          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
-        xhr.open("GET","rails/info/properties",false);
-        xhr.send("");
-        info.innerHTML = xhr.responseText;
-        info.style.display = 'block'
-      }
-    </script>
-  </head>
-  <body>
-    <div id="page">
-      <div id="sidebar">
-        <ul id="sidebar-items">
-          <li>
-            <h3>Browse the documentation</h3>
-            <ul class="links">
-              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
-              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
-              <li><a href="http://www.ruby-doc.org/core/">Ruby core</a></li>
-              <li><a href="http://www.ruby-doc.org/stdlib/">Ruby standard library</a></li>
+   <!-- Social Section
+   ================================================== -->
+   <div id="social">
+      <div class="row social-container">
+            <ul class="social">
+               <li><a href="https://github.com/scootcho" target="_blank"><i class="fa fa-github"></i></a></li>
+               <li><a href="https://www.facebook.com/scott.tj.yu" target="_blank"><i class="fa fa-facebook"></i></a></li>
+               <li><a href="https://twitter.com/scootcho" target="_blank"><i class="fa fa-twitter"></i></a></li>
+               <li><a href="https://plus.google.com/103041827976361443411" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+               <li><a href="https://www.linkedin.com/in/scottyu" target="_blank"><i class="fa fa-linkedin"></i></a></li>
             </ul>
-          </li>
-        </ul>
       </div>
 
-      <div id="content">
-        <div id="header">
-          <h1>Welcome aboard</h1>
-          <h2>You&rsquo;re riding Ruby on Rails!</h2>
-        </div>
+   </div> <!-- Social End -->
 
-        <div id="about">
-          <h3><a href="rails/info/properties" onclick="about(); return false">About your application&rsquo;s environment</a></h3>
-          <div id="about-content" style="display: none"></div>
-        </div>
+   </header> <!-- Header End -->
 
-        <div id="getting-started">
-          <h1>Getting started</h1>
-          <h2>Here&rsquo;s how to get rolling:</h2>
+   <!-- About Section
+   ================================================== -->
+   <section id="about">
 
-          <ol>
-            <li>
-              <h2>Use <code>rails generate</code> to create your models and controllers</h2>
-              <p>To see all available options, run it without parameters.</p>
-            </li>
+      <div class="row bio-container">
+        <div class="twelve columns bio-inner">
+         <div class="six columns bio-left"> 
+         <div class="pp-container">
 
-            <li>
-              <h2>Set up a default route and remove <span class="filename">public/index.html</span></h2>
-              <p>Routes are set up in <span class="filename">config/routes.rb</span>.</p>
-            </li>
+            <img class="profile-pic wow zoomIn"  src="images/avatar.jpg" alt="" />
+              <h2>Scott Yu</h2>
+              <h3>Ruby On Rails Developer</h3>              
+            </div> <!-- Profile Picture -->
+         </div>
 
-            <li>
-              <h2>Create your database</h2>
-              <p>Run <code>rake db:create</code> to create your database. If you're not using SQLite (the default), edit <span class="filename">config/database.yml</span> with your username and password.</p>
-            </li>
-          </ol>
-        </div>
+
+         <div class="six columns main-col wow fadeIn">
+          <div class="arrow-left"></div>
+
+            <p>
+              As a passionate problem solver, I discovered programming as a great way to solve problems. I practice my programming chops diligently so I can become a ninja robot. I'm interested to help others solve their problems with technology.
+            </p>
+            <p>
+              In my former life as a Senior Auditor at Deloitte, I worked in various industries in Silicon Valley such as SaaS, Online Gaming, Manufacturing, and Venture Capital. Due to experience, I'm especially found of Finance related things such as international money remittance, financial access for unbanked in developing nations, and Bitcoin. This lead me to co-found a company called Qwikwire, an invoicing/billing service in the Philippines that helps real estate companies collect payments from Overseas Filipino Workers. 
+            </p>
+            <p>
+              I also keep a blog on my learnings as a programmer and an entreprenure.
+            </p>
+
+          <div class="row">            
+            <div class="six columns download">
+                <p>
+                  <a href="index.html#blog" class="button"><i class="fa fa-quote-left"></i>Blog</a>
+                  <a href="index.html#contact" class="button"><i class="fa fa-paper-plane"></i>Contact Me</a>
+                  <a href="scott_yu_resume.pdf" class="button" target="_blank"><i class="fa fa-download"></i>PDF Resume</a>
+                </p>
+            </div> <!-- Download Buttons --> 
       </div>
 
-      <div id="footer">&nbsp;</div>
-    </div>
-  </body>
+         </div> <!-- end .main-col -->
+      </div>
+      </div>
+
+
+   </section> <!-- About Section End-->
+
+
+   <!-- Resume Section
+   ================================================== -->
+   <section id="resume">
+    <h1 class="section-title wow fadeInDown">Resume</h1>
+      <!-- Education
+      =============================================== -->
+      <div class="row education">
+
+         <div class="three columns header-col">
+            <h2><span>Education</span></h2>
+         </div>
+
+      <div class="nine columns main-col">
+         <div class="education-timeline">
+            <ul class="timeline wow fadeInUp">
+              <li class="timeline-event">
+                <label class="timeline-event-icon"></label>
+                <div class="timeline-event-copy">
+                  <p class="timeline-event-thumbnail">December 2013 - Current</p>
+                  <h3>Internet University</h3>
+                  <h4>Programming Awesomeness</h4>
+                  <p><strong>Relentlessly Resourceful</strong><br>
+                     Completed various online courses such as Codecademy, Team Treehouse, Rails Tutorial, and The Odin Project. Currently Taking courses from Linux Foundation and Database from Standford Online</p>
+                </div>
+              </li>
+              <li class="timeline-event">
+                <label class="timeline-event-icon"></label>
+                <div class="timeline-event-copy">
+                  <p class="timeline-event-thumbnail">August 2013 - December 2013</p>
+                  <h3>JFDI.asia</h3>
+                  <h4>Joyful Frog Digital Incubator</h4>
+                  <p><strong>Class 2013B</strong><br>
+                     Studied wide range of Startup Methodologies and put them to practical usage. Methodoloies include Product Market Fit, Customer Development, Lean Methodlogies, Metrics Analysis, and Investor Pitch.</p>
+                </div>
+              </li>
+              <li class="timeline-event">
+                <label class="timeline-event-icon"></label>
+                <div class="timeline-event-copy">
+                  <p class="timeline-event-thumbnail">Class of 2009</p>
+                  <h3>San Jose State University</h3>
+                  <h4>Bachelor of Science</h4>
+                  <p><strong>Corporate Financial Management</strong><br>
+                     Graduated with Gary J. Sbona Honors Program and a Dean's Scholar.</p>
+                </div>
+              </li>
+            </ul>  
+         </div> <!-- Education Timeline End --> 
+      </div> <!-- main-col end -->
+
+      </div> <!-- End Education -->
+
+
+      <!-- Work
+      ========================================= -->
+      <div class="row work">
+
+         <div class="three columns header-col">
+            <h2><span>Experience</span></h2>
+         </div>
+
+         <div class="nine columns main-col">
+
+         <div class="work-timeline">
+            <ul class="timeline">
+              <li class="timeline-event">
+                <label class="timeline-event-icon"></label>
+                <div class="timeline-event-copy">
+                  <p class="timeline-event-thumbnail">January 2013 - Present</p>
+                  <h3>Qwikwire</h3>
+                  <h4>Ruby on Rails Developer / Business Development</h4>
+                  <p>
+                    * Facilitated communication between TAG and its customers to develop User Stories and features used for Agile development.</br>
+                    * Crafted responsive invoice with CSS that was adopted in production. Email invoice was used with 500+ beta testers.</br>
+                    * Established and setup payment distribution facilities in with BDO and Metrobank, top 2 banks in the Philippines.</br>
+                  </p>
+                </div>
+              </li>
+              <li class="timeline-event">
+                <label class="timeline-event-icon"></label>
+                <div class="timeline-event-copy">
+                  <p class="timeline-event-thumbnail">September 2010 - November 2012</p>
+                  <h3>Deloitte &amp; Touche LLP</h3>
+                  <h4>Senior Auditor</h4>
+                  <p>
+                    * Tested and reviewed revenue recognition accounting with multiple element arrangements criteria under ASC 605 (VSOE, 
+                    BESP, TPE, and PCS) for Saas, hardware, and gaming clients.</br>
+                    * Assessed Sarbanes-Oxley (SOX 404) compliance by testing design and implementation of controls as well as understanding 
+                    and mapping of business processes.</br>
+                  </p>
+                </div>
+              </li>
+              <li class="timeline-event">
+                <label class="timeline-event-icon"></label>
+                <div class="timeline-event-copy">
+                  <p class="timeline-event-thumbnail">Feburary 2009 - May 2009</p>
+                  <h3>National Semiconductor</h3>
+                  <h4>Business Consultant</h4>
+                  <p>
+                    * Investigated in competition, barriers, trends and various strategies to market new solar optimization equipment.</br>
+                    * Received praise from Treasurer from building a ROI model to estimate break-even as and cost/benefit sensitivity.</br>
+                  </p>
+                </div>
+              </li>
+            </ul>  
+         </div> <!-- Work Timeline End --> 
+         </div> <!-- main-col end -->
+
+      </div> <!-- End Work -->
+
+
+      <!-- Skills
+      =============================================== -->
+      <div class="row skill">
+
+         <div class="three columns header-col">
+            <h2><span>Skills</span></h2>
+         </div>
+
+         <div class="nine columns main-col">
+
+<!--             <p>
+              My Ninja Skills
+            </p>
+ -->
+        <div class="bars">
+
+           <ul class="skills">
+            <li><span class="bar-expand html5 wow fadeInLeft"></span><em>HTML</em></li>
+            <li><span class="bar-expand css wow fadeInLeft"></span><em>CSS</em></li>
+            <li><span class="bar-expand javascript wow fadeInLeft"></span><em>JavaScript</em></li>
+            <li><span class="bar-expand ruby wow fadeInLeft"></span><em>Ruby</em></li>
+            <li><span class="bar-expand rails wow fadeInLeft"></span><em>Rails</em></li>
+            <li><span class="bar-expand photoshop wow fadeInLeft"></span><em>Photoshop</em></li>
+            <li><span class="bar-expand illustrator wow fadeInLeft"></span><em>Illustrator</em></li>
+          </ul>
+
+        </div><!-- end skill-bars -->
+
+      </div> <!-- main-col end -->
+
+      </div> <!-- End skills -->
+
+      <!-- Awards
+      =============================================== -->
+      <div class="row awards">
+
+         <div class="three columns header-col">
+            <h2><span>Recognition</span></h2>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <p>Just some recognition for putting in hard work :)
+            </p>
+
+				<div class="award-list">
+
+				   <ul>
+             <li class="wow fadeIn">
+                <span><i class="fa fa-graduation-cap fa-5x pull-left fa-fw"></i></span>
+                <h3>Gary J. Sbona Honors</h3>
+                <h5>Alumnus</h5>
+                <h4>Completed 2 Semesters Practicum</h4>
+             </li>
+             <li class="wow fadeIn">
+                <span><i class="fa fa-graduation-cap fa-5x pull-left fa-fw"></i></span>
+                <h3>Dean's Scholar Award</h3>
+                <h5>Graduate</h5>
+                <h4>Earned a 3.65 or higher GPA in at least two contiguous semesters</h4>
+             </li>
+             <li class="wow fadeIn">
+                <span><i class="fa fa-trophy fa-5x pull-left fa-fw"></i></span>
+                <h3>PricewaterhouseCoopers xACT Case Competition</h3>
+                <h5>Winner SJSU</h5>
+                <h4>Team Lead</h4>
+             </li>
+
+					</ul>
+
+				</div><!-- end awards list -->
+
+			</div> <!-- main-col end -->
+
+      </div> <!-- End skills -->
+
+   </section> <!-- Resume Section End-->
+
+
+   <!-- Portfolio Section
+   ================================================== -->
+   <section id="portfolio">
+
+      <div class="row">
+
+         <div class="twelve columns collapsed">
+
+            <h1 class="section-title wow fadeInDown">Some of My Works</h1>
+
+            <!-- portfolio-wrapper -->
+            <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf wow fadeIn">
+
+          	   <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="index.html#modal-01" title="">
+                        <img alt="" src="http://placehold.it/300x300&text=coming+soon!">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Portfolio Title</h5>
+                              <p>Illustrration</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="fa fa-plus fa-2x"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="index.html#modal-02" title="">
+                        <img alt="" src="http://placehold.it/300x300&text=coming+soon!">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Portfolio Title</h5>
+                              <p>Web Development</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="fa fa-plus fa-2x"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="index.html#modal-03" title="">
+                        <img alt="" src="http://placehold.it/300x300&text=coming+soon!">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Portfolio Title</h5>
+                              <p>Webdesign</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="fa fa-plus fa-2x"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="index.html#modal-04" title="">
+                        <img alt="" src="http://placehold.it/300x300&text=coming+soon!">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Portfolio Title</h5>
+                              <p>Photography</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="fa fa-plus fa-2x"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+            </div> <!-- portfolio-wrapper end -->
+
+         </div> <!-- twelve columns end -->
+
+
+         <!-- Modal Popup
+	      =============================================== -->
+
+         <div id="modal-01" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="http://placehold.it/640x427" alt="" />
+
+		      <div class="description-box">
+			      <h4>This is title</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="index.html#" class="button">Live Demo</a>
+		         <a class="popup-modal-dismiss button btn-close">Close</a>
+            </div>
+
+	      </div><!-- modal-01 End -->
+
+         <div id="modal-02" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="http://placehold.it/640x427" alt="" />
+
+		      <div class="description-box">
+			      <h4>This is title</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Branding, Web Development</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="index.html#" class="button">Live Demo</a>
+		         <a class="popup-modal-dismiss button btn-close">Close</a>
+            </div>
+
+	      </div><!-- modal-02 End -->
+
+         <div id="modal-03" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="http://placehold.it/640x427" alt="" />
+
+		      <div class="description-box">
+			      <h4>This is title</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Branding</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="index.html#" class="button">Live Demo</a>
+		         <a class="popup-modal-dismiss button btn-close">Close</a>
+            </div>
+
+	      </div><!-- modal-03 End -->
+
+         <div id="modal-04" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="http://placehold.it/640x427" alt="" />
+
+		      <div class="description-box">
+			      <h4>This is title</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Photography</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="index.html#" class="button">Live Demo</a>
+		         <a class="popup-modal-dismiss button btn-close">Close</a>
+            </div>
+
+	      </div><!-- modal-04 End -->
+
+         <div id="modal-05" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="http://placehold.it/640x427" alt="" />
+
+		      <div class="description-box">
+			      <h4>This is title</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="index.html#" class="button">Live Demo</a>
+		         <a class="popup-modal-dismiss button btn-close">Close</a>
+            </div>
+
+	      </div><!-- modal-05 End -->
+
+         <div id="modal-06" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="http://placehold.it/640x427" alt="" />
+
+		      <div class="description-box">
+			      <h4>This is title</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Photography</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="index.html#" class="button">Live Demo</a>
+		         <a class="popup-modal-dismiss button btn-close">Close</a>
+            </div>
+
+	      </div><!-- modal-06 End -->
+
+         <div id="modal-07" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="http://placehold.it/640x427" alt="" />
+
+		      <div class="description-box">
+			      <h4>This is title</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Branding, Illustration</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="index.html#" class="button">Live Demo</a>
+		         <a class="popup-modal-dismiss button btn-close">Close</a>
+            </div>
+
+	      </div><!-- modal-07 End -->
+
+         <div id="modal-08" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="http://placehold.it/640x427" alt="" />
+
+		      <div class="description-box">
+			      <h4>This is title</h4>
+			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Webdesign, Photography</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="index.html#" class="button">Live Demo</a>
+		         <a class="popup-modal-dismiss button btn-close">Close</a>
+            </div>
+
+	      </div><!-- modal-01 End -->
+
+
+      </div> <!-- row End -->
+
+   </section> <!-- Portfolio Section End-->
+
+
+   <!-- Call-To-Action Section
+   ================================================== -->
+   <section id="call-to-action">
+
+      <div class="row">
+
+         <div class="two columns header-col">
+            <h1 class="wow fadeInLeft">
+              <span><i class="fa fa-paper-plane fa-5x pull-left fa-fw"></i></span>
+            </h1>
+         </div>
+
+         <div class="seven columns">            
+            <h2 class="wow zoomIn">Got a problem you would like to solve with Tech?</h2>
+            <p>I'd love to grab a drink and discuss things. Let me help you get things done!</p>
+
+         </div>
+
+         <div class="three columns action wow fadeIn">
+
+            <a href="index.html#contact" class="button">Contact Me</a>
+
+         </div>
+
+      </div>
+
+   </section> <!-- Call-To-Action Section End-->
+
+
+   <!-- Testimonials Section
+   ================================================== -->
+   <section id="testimonials">
+      <div class="text-container">
+         <div class="row">
+          <div class="twelve columns flex-container">
+            <h1 class="section-title wow fadeInDown">Testimonials</h1>
+
+            <div id="testimonial-slides" class="owl-carousel">
+              <div> 
+                <blockquote><p>I have worked with Scott on Qwikwire and I could say that he is the most versatile member of our team. Although a Finance background, he learned enough coding and programming to work with our engineers in developing many of the features of our product. His knowledge in the payments industry (regulations, markets, and money logistics) has helped Qwikwire gain the best interchange payments processing rates with our underwriting banks (Wells Fargo and BankCard USA). He is also instrumental in our user A/B testing, allowing us to validate many of the solutions we offer with our target customers.</p>
+                 <cite> Ray Refundo - Co-Founder @ Qwikwire</cite>
+              </blockquote> 
+              </div> <!-- Single testimonial -->
+
+              <div> 
+                <blockquote><p>I have had the opportunity to work with Scott on and off with Scott for two years at Deloitte. He was a pleasure to work with and was a tremendous asset to my audit team. Scott was diligent in his work, detail-oriented, and was a great person to be around because of his positive attitude and sense of humor. While supervising him, I was always confident in his ability to turn projects given to him into high quality workpapers that would be ready for review by our audit partners. Scott worked on a variety of projects for me such as audit testing deferred revenue accounts, accounts recievables, and some contra A/R Accounts for a public fabless semiconductor Company</p>
+                 <cite> Keith Ma - Senior Revenue Accountant @ Power Integrations</cite>
+              </blockquote> 
+              </div> <!-- Single testimonial -->
+
+              <div> 
+                <blockquote><p>I worked with Scott in Alpha Kappa Psi where I was fortunate enough to have him as my Pledge Educator while pledging for Alpha Kappa Psi. He was such a hands-on educator and lead us by being a great example of what we one day oped to be. He stressed the importance of being a team player and really got us to learn how to adapt and work with others in a professional setting. Scott is definitely someone who is opinionated and will tell you when things should be fixed, but he also picks at your mind to see how these things should be fixed and why. To this day, Scott is still a mentor to me and someone that I look up to. I honestly would not be where I am today if it were not for him challenging and inspiring me along the way</p>
+                 <cite> Jenny Au - Audit Associate @ Deloitte</cite>
+              </blockquote> 
+              </div> <!-- Single testimonial -->
+
+            </div> <!-- Owl Carousel End --> 
+
+          </div> <!-- Testimonial-container ends -->
+
+         </div> <!-- row ends -->
+
+       </div>  <!-- text-container ends -->
+
+   </section> <!-- Testimonials Section End-->
+
+
+   <!-- Contact Section
+   ================================================== -->
+   <section id="contact">
+
+      <div class="row section-head">
+          <div class="twelve columns">
+              <h1 class="section-title wow fadeInDown">Get In Touch</h1>
+              <p class="lead">Send me a message and I'll try my best to get back to you in a timely manner.</p>
+          </div>
+      </div> <!-- Section head --> 
+
+      <div class="row">
+          <div class="five columns">
+             <div class="form-container wow fadeIn">
+               <!-- form -->
+
+               <form action="index.html#" method="post" id="contactForm" name="contactForm">
+      				  	<fieldset>
+
+                        <div>
+      						   <input type="text" placeholder="Name" value="" size="35" id="contactName" name="contactName">
+                        </div>
+
+                        <div>
+      						   <input type="text" placeholder="Email" value="" size="35" id="contactEmail" name="contactEmail">
+                        </div>
+
+                        <div>
+      						   <input type="text" placeholder="Subject" value="" size="35" id="contactSubject" name="contactSubject">
+                        </div>
+
+                        <div>
+                           <textarea cols="5" rows="5" placeholder="Message" id="contactMessage" name="contactMessage"></textarea>
+                        </div>
+
+                        <div>
+                         <!-- contact-warning -->
+                         <div id="message-warning"> Error boy</div>
+                           <button class="submit">Submit</button>
+                           <span id="image-loader">
+                              <img alt="" src="images/loader.gif">
+                           </span>
+                        </div>
+
+      					 </fieldset>
+				        </form> <!-- Form End -->
+                         <!-- contact-success -->
+                         <div id="message-success">
+                                <i class="fa fa-check"></i>Your message was sent, thank you!<br>
+                         </div>
+            </div>  <!-- Form Container End -->
+
+          </div>
+
+      <div class="seven columns">
+<!--         <h1><span>Find me on Google Map</span></h1> -->
+         <!-- Start Google Map -->
+         <div id="map"></div>
+         <!-- End -->
+      </div> <!-- Row ends-->
+
+
+      </div> <!-- Row ends-->
+
+
+
+   </section> <!-- Contact Section End-->
+
+
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+      <div class="row">
+
+         <div class="twelve columns">
+
+            <ul class="social-links">
+               <li><a href="https://github.com/scootcho" target="_blank"><i class="fa fa-github"></i></a></li>
+               <li><a href="https://www.facebook.com/scott.tj.yu" target="_blank"><i class="fa fa-facebook"></i></a></li>
+               <li><a href="https://twitter.com/scootcho" target="_blank"><i class="fa fa-twitter"></i></a></li>
+               <li><a href="https://plus.google.com/103041827976361443411" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+               <li><a href="https://www.linkedin.com/in/scottyu" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+
+            <ul class="copyright">
+               <li>Scott Yu &copy; Copyright 2014, All Rights Reserved</li>
+               
+            </ul>
+
+         </div>
+
+         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="index.html#home"><i class="fa fa-chevron-up"></i></a></div>
+
+      </div>
+
+   </footer> <!-- Footer End-->
+
+   <!-- Java Script
+   ================================================== -->
+
+   <script src="js/jquery-2.1.1.min.js"></script>
+   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&AMP;sensor=false"></script>
+   <script src="js/gmaps.js"></script>
+   <script src="assets/owl-carousel/owl.carousel.min.js"></script>
+   <script src="js/waypoints.js"></script>
+   <script src="js/jquery.fittext.js"></script>
+   <script src="js/magnific-popup.js"></script>
+   <script src="js/wow.min.js"></script>
+   <script src="js/jquery.nicescroll.min.js"></script>
+   <script src="js/script.js"></script>
+
+</body>
+
 </html>
