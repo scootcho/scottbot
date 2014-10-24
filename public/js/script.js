@@ -10,9 +10,9 @@
 
   $(window).load(function(){  // makes sure the whole site is loaded
 
-    $('.spinner').fadeOut();   // will first fade out the loading animation  
-    $('#preloader').delay(350).fadeOut('slow');    
-    $('body').delay(350);   
+    $('.spinner').fadeOut();   // will first fade out the loading animation
+    $('#preloader').delay(350).fadeOut('slow');
+    $('body').delay(350);
 
     });
 
@@ -181,23 +181,23 @@ function parallax() {
 
 
     $(document).ready(function() {
-     
+
     $("#testimonial-slides").owlCarousel({
-     
+
     navigation : false, // Show next and prev buttons
     slideSpeed : 300,
     paginationSpeed : 400,
     singleItem:true
-     
+
     // "singleItem:true" is a shortcut for:
     // items : 1,
     // itemsDesktop : false,
     // itemsDesktopSmall : false,
     // itemsTablet: false,
     // itemsMobile : false
-     
+
     });
-     
+
     });
 
 
@@ -207,63 +207,12 @@ function parallax() {
 
     // main directions
       map = new GMaps({
-        el: '#map', lat: 37.40294, lng: -122.04994, zoom: 13, zoomControl : true, 
+        el: '#map', lat: 37.40294, lng: -122.04994, zoom: 13, zoomControl : true,
         zoomControlOpt: { style : 'SMALL', position: 'TOP_LEFT' }, panControl : false, scrollwheel: false
       });
     // add address markers
     map.addMarker({ lat: 37.40294, lng: -122.04994, title: 'Hacker Dojo',
       infoWindow: { content: '<p>599 Fairchild Dr, Mountain View, CA 94043</p>' } });
 
-/*----------------------------------------------------*/
-/*	contact form
-------------------------------------------------------*/
-
-   $('form#contactForm button.submit').click(function() {
-
-      $('#image-loader').fadeIn();
-
-      var contactName = $('#contactForm #contactName').val();
-      var contactEmail = $('#contactForm #contactEmail').val();
-      var contactSubject = $('#contactForm #contactSubject').val();
-      var contactMessage = $('#contactForm #contactMessage').val();
-
-      var data = 'contactName=' + contactName + '&contactEmail=' + contactEmail +
-               '&contactSubject=' + contactSubject + '&contactMessage=' + contactMessage;
-
-      $.ajax({
-
-	      type: "POST",
-	      url: "inc/sendEmail.php",
-	      data: data,
-	      success: function(msg) {
-
-            // Message was sent
-            if (msg == 'OK') {
-               $('#image-loader').fadeOut();
-               $('#message-warning').hide();
-               $('#contactForm').fadeOut();
-               $('#message-success').fadeIn();   
-            }
-            // There was an error
-            else {
-               $('#image-loader').fadeOut();
-               $('#message-warning').html(msg);
-	            $('#message-warning').fadeIn();
-            }
-
-	      }
-
-      });
-      return false;
-   });
-
 
 });
-
-
-
-
-
-
-
-
