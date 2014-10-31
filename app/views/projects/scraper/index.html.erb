@@ -1,3 +1,5 @@
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
 <style>
 
 body {
@@ -13,19 +15,19 @@ form {
 }
 
 
-#title{
-  width: 50%;
+.title-center {
+  width: 40%;
   margin: 0px auto;
-  margin-top: 100px;
+  margin-top: 50px;
   text-align: center;
-  font-family: "Open Sans", sans;
+  font-family: 'Roboto', sans-serif;
   color: #fff;
 }
 
 .clean-slide {
   margin: 0px auto;
-  width: 50%;
-  padding: 10px;
+  width: 100%;
+  padding: 10px 0px;
   font-family: "Open Sans", sans;
   color: #377D6A;
   background: #efefef;
@@ -39,7 +41,7 @@ form {
 
 .clean-slide:active {
   color: #377D6A;
-  text-indent: 0;
+  text-indent: 20px;
   background: #fff;
   border-radius: 3px;
 }
@@ -50,34 +52,37 @@ form {
   border: 0;
   border-radius: 3px;
   padding: 10px;
-  margin: 20px 10px;
-  width: 50%;
+  margin: 20px 0px;
+  width: 100%;
   font-weight: bold;
   font-size: 
 }
 
 #img{
+  margin: 15px;
   text-align: center;
   border-radius: 100%;
-  border: 5px solid #fff;
+  border: 8px solid #fff;
   width: 150px;
   height: auto;
 }
 
-
 </style>
 
 
-
-
-
-<div id="title">
+<div class="title-center">
+  <h1>THE FLASHCARD EXPORTORRR!!</h1>
   <img id=img src="http://i.imgur.com/nkjzLsT.jpg?1"></img>
-  <h1>Flash Cards Exportbot!</h1>
-</div>
+  <p>Export Quizlet flashcard set to CSV file.</p>
 
 <form action="scraper" method="POST">
   <input class="clean-slide" type="text" name="scrape[url]" placeholder="http://quizlet.com/43197543/ruby-on-rails-flash-cards/"/>
   </br>
   <input class="button" type="submit" value="GET MY FILE!"></input>
 </form>
+
+  <p><small>This exporter was created because built-in online flashcard apps mess up the format when outputting to csv file. Especially when there are commas somewhere.</small></p>
+  <p><small>With THE FLASHCARD EXPORTORR the flashcard format is retained, front and back sided, that's all!</small></p>
+  <p><small>**cram.com & memrise exporting options coming soon!</small></p>
+</div>
+
