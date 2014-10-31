@@ -10,9 +10,13 @@ require 'open-uri'
   def create
 
   if params[:scrape][:url].blank?
-       flash[:notice] = "please enter a valid address"
+       flash[:notice] = "the field cannot be blank."
        redirect_to action: :index and return
-     else
+  elsif params[:scrape][:url] !~ /(http:\/\/quizlet.com\/)[0-9]*\/[a-z\S]*/
+       flash[:notice] = "please enter a valid Quizlet URL"
+       redirect_to action: :index and return
+
+  elsif
 
     @scrape = params[:scrape][:url]
 
