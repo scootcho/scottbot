@@ -1,12 +1,83 @@
+<style>
 
-<div><h1>SCRAPAGE!</h1></div>
+body {
+  background: #2C82C9;
+  width: 100%;
+}
+
+form {
+  margin-right 0px;
+  margin-left 0px;
+  width: 100%;
+  text-align: center;
+}
+
+
+#title{
+  width: 50%;
+  margin: 0px auto;
+  margin-top: 100px;
+  text-align: center;
+  font-family: "Open Sans", sans;
+  color: #fff;
+}
+
+.clean-slide {
+  margin: 0px auto;
+  width: 50%;
+  padding: 10px;
+  font-family: "Open Sans", sans;
+  color: #377D6A;
+  background: #efefef;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  text-indent: 20px; // Arbitrary.
+}
+
+.clean-slide:focus,
+
+.clean-slide:active {
+  color: #377D6A;
+  text-indent: 0;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.button {
+  background: #fff;
+  color: #2C82C9;
+  border: 0;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 20px 10px;
+  width: 50%;
+  font-weight: bold;
+  font-size: 
+}
+
+#img{
+  text-align: center;
+  border-radius: 100%;
+  border: 5px solid #fff;
+  width: 150px;
+  height: auto;
+}
+
+
+</style>
+
+
+
+
+
+<div id="title">
+  <img id=img src="http://i.imgur.com/nkjzLsT.jpg?1"></img>
+  <h1>Flash Cards Exportbot!</h1>
+</div>
 
 <form action="scraper" method="POST">
-<select>
-  <option value="quizlet">Quizlet</option>
-  <option value="cram">Cram.com</option>
-</select>
-
-  <input type="text" name="scrape[url]" placeholder="Enter URL here!"/>
-  <input type="submit" value="scrape!"></input>
+  <input class="clean-slide" type="text" name="scrape[url]" placeholder="http://quizlet.com/43197543/ruby-on-rails-flash-cards/"/>
+  </br>
+  <input class="button" type="submit" value="GET MY FILE!"></input>
 </form>
