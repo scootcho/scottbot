@@ -4,10 +4,16 @@ require 'nokogiri'
 require 'open-uri'
 
   def index
-     @scrape = params[:scrape]
+     @scrape = params[:scrape]     
   end
 
   def create
+
+  if params[:scrape][:url].blank?
+       flash[:notice] = "please enter a valid address"
+       redirect_to action: :index and return
+     else
+
     @scrape = params[:scrape][:url]
 
     @doc = Nokogiri::HTML(open("#{@scrape}"))
@@ -31,6 +37,7 @@ require 'open-uri'
         csv << [ @words[index], @defs[index] ]
       end
     end
+  end
 
    #Sending data to browser
    send_data csv_string,

@@ -67,7 +67,23 @@ form {
   height: auto;
 }
 
+.alert {
+  margin: 0px auto;
+  padding: 5px 0px;
+  width: 40%;
+  text-align: center;
+  font-family: "Open Sans", sans;
+  color: #377D6A;
+  background: #ffCC66;
+  border: 0px;
+  border-radius: 3px;
+}
+
 </style>
+
+<% if flash[:notice] -%>
+  <div class="alert"><%= flash[:notice] %></div>
+<% end %>
 
 
 <div class="title-center">
@@ -85,4 +101,3 @@ form {
   <p><small>With THE FLASHCARD EXPORTORR the flashcard format is retained, front and back sided, that's all!</small></p>
   <p><small>**cram.com & memrise exporting options coming soon!</small></p>
 </div>
-
