@@ -1,10 +1,10 @@
 Scottbot::Application.routes.draw do
   root :to => 'home#index'
 
-  namespace :projects do
-    resources :scraper
-  end
+  get 'projects/scraper' => 'projects/scraper#index'
+  post 'projects/scraper' => 'projects/scraper#create'  
   
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
