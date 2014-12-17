@@ -4,6 +4,7 @@ Scottbot::Application.routes.draw do
   get 'projects/scraper' => 'projects/scraper#index'
   post 'projects/scraper' => 'projects/scraper#create'  
   
+  post 'submit_request' => 'home#submit_request'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
