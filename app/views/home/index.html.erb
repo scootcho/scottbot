@@ -651,35 +651,37 @@
           </div>
       </div> <!-- Section head -->
 
+
       <div class="row">
           <div class="five columns">
              <div class="form-container wow fadeIn">
                <!-- form -->
 
-               <form method="post" action="http://forms.brace.io/scott.tj.yu@gmail.com" id="contactForm" name="contactForm">
-      				  	<fieldset>
+                <%= form_tag submit_request_path, method: :post, html: { id: "contactForm" } do |f| %>
 
-                        <div>
-      						   <input type="text" placeholder="Name" value="" size="35" id="contactName" name="contactName">
+                  <div>
+      						   <input type="text" placeholder="Name" value="" size="35" id="contactName" name="name">
                         </div>
 
                         <div>
-      						   <input type="text" placeholder="Email" value="" size="35" id="contactEmail" name="contactEmail">
+      						   <input type="text" placeholder="Email" value="" size="35" id="contactEmail" name="email">
                         </div>
 
                         <div>
-      						   <input type="text" placeholder="Subject" value="" size="35" id="contactSubject" name="contactSubject">
+      						   <input type="text" placeholder="Subject" value="" size="35" id="contactSubject" name="subject">
                         </div>
 
                         <div>
-                           <textarea cols="5" rows="5" placeholder="Message" id="contactMessage" name="contactMessage"></textarea>
+                           <textarea cols="5" rows="5" placeholder="Message" id="contactMessage" name="message"></textarea>
                         </div>
 
                         <div>
                             <button class="submit">Submit</button>
                         </div>
 
-      					 </fieldset>
+                  <% end %>
+
+
 				        </form> <!-- Form End -->
                          <!-- contact-success -->
                          <div id="message-success">
