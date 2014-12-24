@@ -8,7 +8,7 @@ gem 'nokogiri'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
+gem 'figaro', '1.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
