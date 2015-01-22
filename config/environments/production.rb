@@ -67,11 +67,11 @@ Scottbot::Application.configure do
 
   # Mailer
   ActionMailer::Base.default :from => 'scott.tj.yu@gmail.com'
-  config.action_mailer.default_url_options = { :host => "scottbot.me" }
+  config.action_mailer.default_url_options = { :host => "http://scottbot.me/" }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :address => "smtp.mandrillapp.com",
-    :port => 587,
+    :port => 25,
     :user_name => ENV['MANDRILL_USER'],
     :password => ENV['MANDRILL_APIKEY'],
     :authentication => :login,
